@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    card_view:cardCornerRadius="5dp"
+    card_view:cardElevation="5dp"
+    android:layout_margin="5dp"
+    android:layout_gravity="center_horizontal"
+    android:foreground="?android:attr/selectableItemBackground">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#fffffff0">
+
+        <ImageView
+            android:id="@+id/moviecard"
+            android:layout_width="80dp"
+            android:layout_height="100dp"
+            android:scaleType="fitXY"/>
+
+        <ImageView
+            android:id="@+id/select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"/>
+        <TextView
+            android:id="@+id/tilt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:layout_marginLeft="10dp"
+            android:layout_toEndOf="@id/moviecard"
+            android:layout_toStartOf="@id/select"/>
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="3"
+            android:lines="3"
+            android:ellipsize="end"
+            android:layout_below="@id/tilt"
+            android:layout_marginLeft="10dp"
+            android:layout_toEndOf="@id/moviecard"
+            android:layout_toStartOf="@id/select"/>
+
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cardmovierating"
+            android:stepSize="0.1"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_below="@id/description"
+            android:isIndicator="true"
+            android:rating="1"
+            android:visibility="visible"
+            android:layout_marginLeft="10dp"
+            android:layout_toEndOf="@id/moviecard"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/ratingtext"
+            android:layout_toRightOf="@id/movierating"
+            android:layout_alignBottom="@id/movierating"
+            android:layout_alignTop="@+id/movierating"
+            android:textAlignment="gravity"
+            android:gravity="center"/>
+    </RelativeLayout>
+</android.support.v7.widget.CardView>
